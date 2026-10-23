@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: Posts sobre o que estou estudando em Machine Learning, MLOps, LLMs e IA agêntica.
+---
+<div class="wrap">
+  <header class="page-head">
+    <h1>Blog</h1>
+    <p class="lead">Anotações do que estou estudando, escritas para que eu mesmo consiga explicar cada tema com clareza.</p>
+  </header>
+
+  <div class="filters" role="group" aria-label="Filtrar posts por tag">
+    <button type="button" class="chip" data-tag="" aria-pressed="true">Todos</button>
+    {% for tag in site.tags %}
+    <button type="button" class="chip" data-tag="{{ tag[0] | slugify }}" aria-pressed="false">{{ tag[0] }} ({{ tag[1].size }})</button>
+    {% endfor %}
+  </div>
+
+  <ul class="rows" id="lista-posts">
+    {% for post in site.posts %}
+      {% include post-row.html post=post %}
+    {% endfor %}
+  </ul>
+  <p class="empty" id="sem-posts" hidden>Nenhum post com essa tag ainda.</p>
+</div>

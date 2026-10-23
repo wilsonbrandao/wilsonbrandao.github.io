@@ -1,0 +1,58 @@
+---
+layout: default
+title: Início
+permalink: /
+---
+<section class="hero wrap">
+  <div class="hero-text">
+    <h1>Engenheiro de software, aprendendo a colocar modelos em produção.</h1>
+    <p class="lead">Sou Wilson Brandão, engenheiro de software no Itaú. Estou migrando para Engenharia de Machine Learning e registro aqui o que estudo e construo: projetos, anotações e posts.</p>
+    <p class="actions">
+      <a class="btn primary" href="{{ '/projetos/' | relative_url }}">Ver projetos</a>
+      <a class="btn" href="{{ '/blog/' | relative_url }}">Ler o blog</a>
+    </p>
+  </div>
+
+  <figure class="hero-fig">
+    <svg viewBox="0 0 520 340" role="img" aria-labelledby="fig-t fig-d">
+      <title id="fig-t">Curvas de loss de treino e validação</title>
+      <desc id="fig-d">A curva de treino cai e se estabiliza. A curva de validação cai junto, depois volta a subir. Uma linha tracejada marca o ponto de early stopping, onde o treino deve parar.</desc>
+      <line class="axis" x1="40" y1="20" x2="40" y2="300"/>
+      <line class="axis" x1="40" y1="300" x2="500" y2="300"/>
+      <line class="stop" x1="285" y1="44" x2="285" y2="300"/>
+      <path class="curve train" pathLength="1" d="M40 50 C80 60 90 180 130 210 C170 238 220 250 280 258 C350 266 420 270 500 272"/>
+      <path class="curve val" pathLength="1" d="M40 56 C80 70 95 190 135 220 C175 246 225 256 285 262 C350 270 400 262 430 258 C460 254 480 250 500 246"/>
+      <circle class="dot" cx="285" cy="262" r="5.5"/>
+      <text class="lbl note" x="294" y="58">early stopping</text>
+      <text class="lbl" x="46" y="30">loss</text>
+      <text class="lbl" x="500" y="322" text-anchor="end">épocas</text>
+      <text class="lbl train-l" x="500" y="292" text-anchor="end">treino</text>
+      <text class="lbl val-l" x="500" y="232" text-anchor="end">validação</text>
+    </svg>
+    <figcaption>O ponto em que o modelo para de aprender e começa a decorar. Entender isso é o começo de tudo.</figcaption>
+  </figure>
+</section>
+
+<section class="wrap block">
+  <div class="block-head">
+    <h2>Projetos em destaque</h2>
+    <a href="{{ '/projetos/' | relative_url }}">Ver todos</a>
+  </div>
+  <ul class="rows">
+    {% for p in site.data.projects %}{% if p.featured %}
+      {% include project-row.html p=p %}
+    {% endif %}{% endfor %}
+  </ul>
+</section>
+
+<section class="wrap block">
+  <div class="block-head">
+    <h2>Últimos posts</h2>
+    <a href="{{ '/blog/' | relative_url }}">Ver todos</a>
+  </div>
+  <ul class="rows">
+    {% for post in site.posts limit:3 %}
+      {% include post-row.html post=post %}
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,23 @@
+{% assign p = include.p %}
+<li class="row project-row">
+  <p class="status" data-status="{{ p.status }}">
+    {% case p.status %}
+      {% when 'concluido' %}Concluído
+      {% when 'andamento' %}Em andamento
+      {% else %}Planejado
+    {% endcase %}
+  </p>
+  <div class="row-main">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.summary }}</p>
+    {% if p.stack.size > 0 %}
+    <ul class="stack" aria-label="Tecnologias">
+      {% for s in p.stack %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  <p class="row-links">
+    {% if p.repo != "" and p.repo %}<a href="{{ p.repo }}">Código no GitHub</a>{% endif %}
+    {% if p.demo != "" and p.demo %}<a href="{{ p.demo }}">Ver demo</a>{% endif %}
+  </p>
+</li>

@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Wilson Brandão. Escrito e mantido por mim, publicado com Jekyll no GitHub Pages.</p>
+    <ul>
+      {% unless site.github_username contains 'SEU-USUARIO' %}<li><a href="https://github.com/{{ site.github_username }}" rel="me">GitHub</a></li>{% endunless %}
+      {% unless site.linkedin_username contains 'SEU-USUARIO' %}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" rel="me">LinkedIn</a></li>{% endunless %}
+      <li><a href="{{ '/feed.xml' | relative_url }}">Feed RSS</a></li>
+    </ul>
+  </div>
+</footer>

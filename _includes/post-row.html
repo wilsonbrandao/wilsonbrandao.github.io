@@ -1,0 +1,14 @@
+{% assign p = include.post %}
+{% capture tg %}{% for t in p.tags %}{{ t | slugify }} {% endfor %}{% endcapture %}
+<li class="row post-row" data-tags="{{ tg | strip }}">
+  <time class="row-date" datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%d/%m/%Y" }}</time>
+  <div class="row-main">
+    <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    <p>{{ p.description | default: p.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+  </div>
+  {% if p.tags.size > 0 %}
+  <ul class="tags">
+    {% for t in p.tags %}<li><a href="{{ '/blog/' | relative_url }}#{{ t | slugify }}">{{ t }}</a></li>{% endfor %}
+  </ul>
+  {% endif %}
+</li>

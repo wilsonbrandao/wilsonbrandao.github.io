@@ -1,0 +1,38 @@
+---
+layout: default
+title: Trilha de estudos
+permalink: /trilha/
+description: O mapa do que estou estudando para me tornar Engenheiro de Machine Learning, com o progresso de cada área.
+---
+<div class="wrap">
+  <header class="page-head">
+    <h1>Trilha de estudos</h1>
+    <p class="lead">O plano para os próximos meses. Cada área tem seus tópicos e o progresso é atualizado conforme eu avanço.</p>
+  </header>
+
+  <ul class="trail">
+    {% for item in site.data.trilha %}
+      {% assign done = 0 %}
+      {% for t in item.topics %}{% if t.done %}{% assign done = done | plus: 1 %}{% endif %}{% endfor %}
+      {% assign total = item.topics.size %}
+      {% assign pct = done | times: 100 | divided_by: total %}
+    <li class="trail-item">
+      <div class="trail-head">
+        <h2>{{ item.title }}</h2>
+        <p class="status" data-status="{% case item.status %}{% when 'concluido' %}concluido{% when 'estudando' %}andamento{% else %}planejado{% endcase %}">
+          {% case item.status %}{% when 'concluido' %}Concluído{% when 'estudando' %}Estudando agora{% else %}A seguir{% endcase %}
+        </p>
+      </div>
+      <p>{{ item.summary }}</p>
+      <progress value="{{ pct }}" max="100" aria-label="Progresso em {{ item.title }}">{{ pct }}%</progress>
+      <p class="count">{{ done }} de {{ total }} tópicos</p>
+      <ul class="topics">
+        {% for t in item.topics %}
+        <li class="{% if t.done %}done{% endif %}"><span class="box" aria-hidden="true"></span><span class="sr">{% if t.done %}Concluído: {% else %}Pendente: {% endif %}</span>{{ t.name }}</li>
+        {% endfor %}
+      </ul>
+      {% if item.tag %}<p><a href="{{ '/blog/' | relative_url }}#{{ item.tag | slugify }}">Posts sobre {{ item.title }}</a></p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

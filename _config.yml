@@ -1,0 +1,37 @@
+# ============================================================
+#  CONFIGURAÇÃO DO SITE  (edite os campos marcados com EDITE)
+# ============================================================
+title: Wilson Brandão
+tagline: Engenheiro de software em transição para Machine Learning
+description: Portfólio e caderno de estudos de Wilson Brandão. Projetos, posts e anotações sobre Machine Learning, MLOps, LLMs e IA agêntica.
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+# EDITE: seus links (use só o nome de usuário, sem URL)
+github_username: SEU-USUARIO-GITHUB
+linkedin_username: SEU-USUARIO-LINKEDIN
+
+# EDITE conforme o tipo de repositório:
+#  - Repositório chamado SEU-USUARIO.github.io  ->  url: "https://SEU-USUARIO.github.io"   baseurl: ""
+#  - Repositório com outro nome (ex.: portfolio) ->  url: "https://SEU-USUARIO.github.io"   baseurl: "/portfolio"
+url: "https://SEU-USUARIO-GITHUB.github.io"
+baseurl: ""
+
+# --- Daqui para baixo normalmente não precisa mexer ---
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+permalink: /blog/:year/:month/:slug/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

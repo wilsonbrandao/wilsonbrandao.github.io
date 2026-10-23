@@ -1,0 +1,81 @@
+# ============================================================
+#  TRILHA DE ESTUDOS
+#  Marque  done: true  em cada tópico que você terminar.
+#  O progresso de cada área é calculado automaticamente.
+#  status: estudando | proximo | concluido
+#  tag: nome EXATO da tag usada nos posts (liga a trilha ao blog)
+# ============================================================
+- title: Fundamentos de Machine Learning
+  status: proximo
+  tag: Fundamentos
+  summary: "A base que sustenta todo o resto: como um modelo aprende, como medir se aprendeu e como saber quando está errado."
+  topics:
+    - { name: "Regressão e classificação", done: false }
+    - { name: "Overfitting e regularização", done: false }
+    - { name: "Validação cruzada e métricas", done: false }
+    - { name: "Árvores e gradient boosting", done: false }
+    - { name: "Redes neurais básicas", done: false }
+
+- title: Feature Engineering
+  status: estudando
+  tag: Feature Engineering
+  summary: "Transformar dados brutos em sinais que o modelo consegue usar, sem vazar informação do futuro."
+  topics:
+    - { name: "O que é feature engineering", done: true }
+    - { name: "Nulos e outliers", done: false }
+    - { name: "Codificação de variáveis categóricas", done: false }
+    - { name: "Features temporais e janelas", done: false }
+    - { name: "Data leakage", done: false }
+    - { name: "Feature store e training-serving skew", done: false }
+
+- title: MLOps
+  status: proximo
+  tag: MLOps
+  summary: "Levar um modelo do notebook para produção e mantê-lo funcionando."
+  topics:
+    - { name: "Versionamento de dados e modelos", done: false }
+    - { name: "Pipelines de treino reprodutíveis", done: false }
+    - { name: "Rastreamento de experimentos", done: false }
+    - { name: "Deploy de modelo como API", done: false }
+    - { name: "Monitoramento e drift", done: false }
+    - { name: "CI/CD para ML", done: false }
+
+- title: Design Patterns e código de produção
+  status: proximo
+  tag: Design Patterns
+  summary: "Padrões de projeto aplicados a pipelines e serviços de ML, com testes."
+  topics:
+    - { name: "Padrões criacionais, estruturais e comportamentais", done: false }
+    - { name: "Strategy, Factory e Pipeline em código de ML", done: false }
+    - { name: "Testes para código de dados e modelos", done: false }
+
+- title: LLMs
+  status: proximo
+  tag: LLMs
+  summary: "Como os modelos de linguagem funcionam e como usá-los de forma confiável."
+  topics:
+    - { name: "Tokens, embeddings e atenção", done: false }
+    - { name: "Prompting", done: false }
+    - { name: "RAG", done: false }
+    - { name: "Avaliação de LLMs", done: false }
+    - { name: "Fine-tuning (LoRA)", done: false }
+
+- title: IA agêntica
+  status: proximo
+  tag: IA Agêntica
+  summary: "Sistemas em que o modelo decide quais passos executar e quais ferramentas chamar."
+  topics:
+    - { name: "Uso de ferramentas e o padrão ReAct", done: false }
+    - { name: "Memória e planejamento", done: false }
+    - { name: "Orquestração com vários agentes", done: false }
+    - { name: "Avaliação e guardrails", done: false }
+
+- title: Preparação para a prova técnica e a sabatina
+  status: proximo
+  tag: Entrevista
+  summary: "Treino direcionado para o processo seletivo."
+  topics:
+    - { name: "Python e estruturas de dados", done: false }
+    - { name: "SQL", done: false }
+    - { name: "Modelar um problema de ML de ponta a ponta", done: false }
+    - { name: "Explicar cada tema em voz alta, como numa sabatina", done: false }

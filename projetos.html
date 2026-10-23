@@ -1,0 +1,17 @@
+---
+layout: default
+title: Projetos
+permalink: /projetos/
+description: Projetos práticos de Machine Learning, MLOps e IA agêntica, com código no GitHub.
+---
+<div class="wrap">
+  <header class="page-head">
+    <h1>Projetos</h1>
+    <p class="lead">Cada projeto nasce de um tema que estou estudando. O código fica no GitHub e as decisões ficam registradas no blog.</p>
+  </header>
+  <ul class="rows">
+    {% for p in site.data.projects %}
+      {% include project-row.html p=p %}
+    {% endfor %}
+  </ul>
+</div>

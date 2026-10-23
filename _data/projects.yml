@@ -1,0 +1,32 @@
+# ============================================================
+#  PROJETOS
+#  Para adicionar um projeto, copie um bloco e preencha.
+#  status: concluido | andamento | planejado
+#  featured: true  -> aparece também na página inicial
+#  repo / demo: deixe vazio ("") se ainda não existir
+#
+#  Os três abaixo são EXEMPLOS planejados. Troque pelos seus.
+# ============================================================
+- title: Pipeline de features para detecção de fraude
+  summary: Features temporais e de comportamento construídas sobre um conjunto de transações sintético, com cuidado explícito contra data leakage.
+  status: planejado
+  featured: true
+  stack: [Python, pandas, scikit-learn]
+  repo: ""
+  demo: ""
+
+- title: Modelo servido como API
+  summary: Um modelo treinado, empacotado em container e exposto por uma API, com testes e pipeline de CI.
+  status: planejado
+  featured: true
+  stack: [FastAPI, Docker, GitHub Actions]
+  repo: ""
+  demo: ""
+
+- title: Agente com LLM e ferramentas
+  summary: Agente que decide quando consultar uma base de documentos e quando chamar uma função, com avaliação das respostas.
+  status: planejado
+  featured: true
+  stack: [Python, LLM, RAG]
+  repo: ""
+  demo: ""

@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ '/' | relative_url }}">Wilson Brandão</a>
+    <nav aria-label="Principal">
+      <ul>
+        {% for item in site.data.navigation %}
+          {% assign current = false %}
+          {% if item.url == '/' %}
+            {% if page.url == '/' %}{% assign current = true %}{% endif %}
+          {% elsif page.url contains item.url %}
+            {% assign current = true %}
+          {% endif %}
+          <li><a href="{{ item.url | relative_url }}"{% if current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Alternar entre tema claro e escuro">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
