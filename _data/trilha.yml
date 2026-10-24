@@ -1,81 +1,102 @@
+
 # ============================================================
-#  TRILHA DE ESTUDOS
-#  Marque  done: true  em cada tópico que você terminar.
-#  O progresso de cada área é calculado automaticamente.
-#  status: estudando | proximo | concluido
-#  tag: nome EXATO da tag usada nos posts (liga a trilha ao blog)
+# TRILHA DE ESTUDOS
+# Marque done: true em cada tópico concluído.
+# O progresso de cada área é calculado automaticamente.
+# status: estudando | proximo | concluido
+# tag: nome EXATO da tag usada nos posts
 # ============================================================
+
 - title: Fundamentos de Machine Learning
-  status: proximo
+  status: estudando
   tag: Fundamentos
-  summary: "A base que sustenta todo o resto: como um modelo aprende, como medir se aprendeu e como saber quando está errado."
+  summary: "Compreender como os modelos aprendem, como avaliar seus resultados e como identificar suas limitações."
   topics:
     - { name: "Regressão e classificação", done: false }
     - { name: "Overfitting e regularização", done: false }
     - { name: "Validação cruzada e métricas", done: false }
-    - { name: "Árvores e gradient boosting", done: false }
+    - { name: "Árvores de decisão e gradient boosting", done: false }
     - { name: "Redes neurais básicas", done: false }
+    - { name: "Seleção e avaliação de modelos", done: false }
 
-- title: Feature Engineering
+- title: Feature Engineering e preparação de dados
   status: estudando
   tag: Feature Engineering
-  summary: "Transformar dados brutos em sinais que o modelo consegue usar, sem vazar informação do futuro."
+  summary: "Preparar dados confiáveis para treinamento e inferência, evitando vazamentos e inconsistências."
   topics:
-    - { name: "O que é feature engineering", done: true }
-    - { name: "Nulos e outliers", done: false }
+    - { name: "Tipos de dados e análise exploratória", done: false }
+    - { name: "Valores ausentes e outliers", done: false }
     - { name: "Codificação de variáveis categóricas", done: false }
+    - { name: "Scaling e normalização", done: false }
+    - { name: "Binning e criação de variáveis", done: false }
     - { name: "Features temporais e janelas", done: false }
     - { name: "Data leakage", done: false }
+    - { name: "Divisão entre treino, validação e teste", done: false }
     - { name: "Feature store e training-serving skew", done: false }
+
+- title: AWS Certified Machine Learning Engineer - Associate
+  status: estudando
+  tag: AWS Machine Learning
+  summary: "Preparação para a certificação AWS, com foco na construção, implantação, operação e manutenção de soluções de ML na nuvem."
+  topics:
+    - { name: "MLA-C02: escopo do exame e domínios", done: false }
+    - { name: "Preparação e transformação de dados na AWS", done: false }
+    - { name: "Amazon S3, AWS Glue e serviços de ingestão de dados", done: false }
+    - { name: "Amazon SageMaker AI: preparação e treinamento", done: false }
+    - { name: "Seleção, treinamento e avaliação de modelos", done: false }
+    - { name: "Hiperparâmetros e otimização de modelos", done: false }
+    - { name: "Deploy, endpoints e inferência", done: false }
+    - { name: "Pipelines de ML e automação de workflows", done: false }
+    - { name: "Monitoramento, drift e manutenção de modelos", done: false }
+    - { name: "Segurança, IAM e proteção de dados", done: false }
+    - { name: "Amazon Bedrock, RAG e modelos fundacionais", done: false }
+    - { name: "IA agêntica e IA responsável", done: false }
+    - { name: "Questões práticas e simulados", done: false }
 
 - title: MLOps
   status: proximo
   tag: MLOps
-  summary: "Levar um modelo do notebook para produção e mantê-lo funcionando."
+  summary: "Automatizar o ciclo de vida dos modelos e manter soluções de ML confiáveis em produção."
   topics:
     - { name: "Versionamento de dados e modelos", done: false }
-    - { name: "Pipelines de treino reprodutíveis", done: false }
+    - { name: "Pipelines de treinamento reproduzíveis", done: false }
     - { name: "Rastreamento de experimentos", done: false }
-    - { name: "Deploy de modelo como API", done: false }
-    - { name: "Monitoramento e drift", done: false }
-    - { name: "CI/CD para ML", done: false }
+    - { name: "Deploy de modelos como API", done: false }
+    - { name: "Monitoramento de modelos e drift", done: false }
+    - { name: "CI/CD para Machine Learning", done: false }
+    - { name: "Orquestração de pipelines na AWS", done: false }
 
-- title: Design Patterns e código de produção
+- title: Engenharia de software aplicada a ML
   status: proximo
   tag: Design Patterns
-  summary: "Padrões de projeto aplicados a pipelines e serviços de ML, com testes."
+  summary: "Aplicar princípios de engenharia de software para desenvolver soluções de ML modulares, testáveis e sustentáveis."
   topics:
     - { name: "Padrões criacionais, estruturais e comportamentais", done: false }
     - { name: "Strategy, Factory e Pipeline em código de ML", done: false }
+    - { name: "Modularização e separação de responsabilidades", done: false }
     - { name: "Testes para código de dados e modelos", done: false }
+    - { name: "Logging, tratamento de erros e observabilidade", done: false }
 
-- title: LLMs
+- title: LLMs e IA generativa
   status: proximo
   tag: LLMs
-  summary: "Como os modelos de linguagem funcionam e como usá-los de forma confiável."
+  summary: "Entender modelos de linguagem e desenvolver aplicações generativas com avaliação e controles de qualidade."
   topics:
     - { name: "Tokens, embeddings e atenção", done: false }
-    - { name: "Prompting", done: false }
-    - { name: "RAG", done: false }
-    - { name: "Avaliação de LLMs", done: false }
-    - { name: "Fine-tuning (LoRA)", done: false }
+    - { name: "Engenharia de prompts", done: false }
+    - { name: "RAG e busca semântica", done: false }
+    - { name: "Avaliação de aplicações com LLMs", done: false }
+    - { name: "Fine-tuning e LoRA", done: false }
+    - { name: "Amazon Bedrock e modelos fundacionais", done: false }
+    - { name: "Segurança e IA responsável", done: false }
 
 - title: IA agêntica
   status: proximo
   tag: IA Agêntica
-  summary: "Sistemas em que o modelo decide quais passos executar e quais ferramentas chamar."
+  summary: "Construir sistemas que usam modelos de IA para planejar tarefas, chamar ferramentas e executar fluxos de trabalho."
   topics:
-    - { name: "Uso de ferramentas e o padrão ReAct", done: false }
+    - { name: "Uso de ferramentas e padrão ReAct", done: false }
     - { name: "Memória e planejamento", done: false }
-    - { name: "Orquestração com vários agentes", done: false }
-    - { name: "Avaliação e guardrails", done: false }
-
-- title: Preparação para a prova técnica e a sabatina
-  status: proximo
-  tag: Entrevista
-  summary: "Treino direcionado para o processo seletivo."
-  topics:
-    - { name: "Python e estruturas de dados", done: false }
-    - { name: "SQL", done: false }
-    - { name: "Modelar um problema de ML de ponta a ponta", done: false }
-    - { name: "Explicar cada tema em voz alta, como numa sabatina", done: false }
+    - { name: "Orquestração de múltiplos agentes", done: false }
+    - { name: "Avaliação, guardrails e segurança", done: false }
+    - { name: "Integração de agentes com serviços AWS", done: false }
