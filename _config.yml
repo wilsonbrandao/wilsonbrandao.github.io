@@ -3,18 +3,14 @@
 # ============================================================
 title: Wilson Brandão
 tagline: Engenheiro de software em transição para Machine Learning
-description: Portfólio e caderno de estudos de Wilson Brandão. Projetos, posts e anotações sobre Machine Learning, MLOps, LLMs e IA agêntica.
+description: Portfólio e caderno de estudos. Projetos, posts e anotações sobre Machine Learning, MLOps, LLMs e IA agêntica.
 lang: pt-BR
-timezone: America/Sao_Paulo
+timezone: America/Sao_Paulos
 
-# EDITE: seus links (use só o nome de usuário, sem URL)
-github_username: SEU-USUARIO-GITHUB
-linkedin_username: SEU-USUARIO-LINKEDIN
+github_username: wilsonbrandao
+linkedin_username: wilson-brandao-costa
 
-# EDITE conforme o tipo de repositório:
-#  - Repositório chamado SEU-USUARIO.github.io  ->  url: "https://SEU-USUARIO.github.io"   baseurl: ""
-#  - Repositório com outro nome (ex.: portfolio) ->  url: "https://SEU-USUARIO.github.io"   baseurl: "/portfolio"
-url: "https://SEU-USUARIO-GITHUB.github.io"
+url: "https://wilsonbrandao.github.io"
 baseurl: ""
 
 # --- Daqui para baixo normalmente não precisa mexer ---
